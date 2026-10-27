@@ -1,6 +1,6 @@
 @Breakout.Api_HostAddress = http://localhost:5239
 
-GET {{Breakout.Api_HostAddress}}/weatherforecast/
+GET {{Breakout.Api_HostAddress}}/health/
 Accept: application/json
 
 ###
