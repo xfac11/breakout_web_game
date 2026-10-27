@@ -2,6 +2,8 @@
 
 ASP.NET Core Web API for the Breakout web game. This initial project provides a health endpoint and OpenAPI document; game sessions and persistence can be added in later milestones.
 
+Entity Framework Core is configured with the PostgreSQL provider. The default development connection string targets a local PostgreSQL instance; override it with the `ConnectionStrings__DefaultConnection` environment variable when needed. Do not commit credentials.
+
 ## Requirements
 
 - .NET 10 SDK
