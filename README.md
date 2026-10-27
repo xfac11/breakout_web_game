@@ -26,5 +26,6 @@ dotnet build Breakout.sln
 
 ## Project layout
 
+- `ARCHITECTURE.md`: current architecture and EF Core/PostgreSQL decision
 - `src/Breakout.Api`: ASP.NET Core HTTP API
 - `breakout_web_game_project_plan.md`: product goals and implementation roadmap
