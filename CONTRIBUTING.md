@@ -2,6 +2,12 @@
 
 This guide describes the standard path for taking a task from an issue through review and into `main`.
 
+## Exceptional owner override
+
+The repository owner may exceptionally bypass a step in this workflow, but only when there is a specific, documented cause (for example, an urgent production fix). Convenience or speed alone is not sufficient. Record the reason and the steps being skipped in the relevant issue or pull request; if neither exists, add the explanation to the commit message.
+
+An override should be difficult to invoke: it must be an explicit, deliberate decision by the owner, limited to the minimum necessary steps, and never an automatic or routine shortcut. Continue to run applicable checks and obtain review wherever feasible. Complete any deferred review, verification, or follow-up work afterward and document the outcome.
+
 ## 1. Create or choose an issue
 
 Open an issue for each feature, bug, or substantial maintenance task before starting work. Search existing issues first to avoid duplicates. Small, self-contained corrections (such as fixing a typo) may be handled without a separate issue.
@@ -64,6 +70,10 @@ Keep the PR focused and reasonably sized. If its scope changes, update the issue
 Reviewers should check that the change meets the issue's acceptance criteria, fits the project architecture, handles relevant failures and edge cases, and includes suitable tests and documentation. Pay particular attention to security boundaries, untrusted input, secrets, and database migrations where applicable.
 
 The author should respond to review feedback, make requested changes on the same branch, and rerun affected checks. Resolve each review conversation once it has been addressed. The PR is ready to merge when it has approval, all required checks are passing, and no blocking review comments remain. If automated checks are not configured, the author is responsible for reporting the local checks that were run.
+
+### Owner self-review
+
+When no other reviewer is available, the repository owner may review their own work. Treat this as an exception, not the default: explicitly note in the PR that it is an owner self-review and why independent review was unavailable. Before approving or merging, review the complete diff against the issue and acceptance criteria, check for unintended changes and edge cases, and run all applicable checks. Arrange an independent review afterward when practical, especially for high-impact changes.
 
 ## 6. Merge into `main`
 
