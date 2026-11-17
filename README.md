@@ -79,6 +79,14 @@ It includes:
 - static assets stored under `public/assets`
 - CSS in `public/style.css`
 
+### Responsive layout
+
+The game keeps a 4:3 logical playfield (1024x768) and scales it to fit the available browser space without distortion. Controls sit beside the playfield on wider screens and move below it at widths of 640px or less.
+
+The minimum tested viewport is 320x400. The responsive layout was also checked at 320x568, 390x844, 768x1024, 844x390, 1024x768, and 1280x800.
+
+The current playfield size and control layout are starting defaults and can be adjusted later to best suit Breakout gameplay.
+
 ## Notes
 
 - The API uses Entity Framework Core with the PostgreSQL provider.
